@@ -71,7 +71,7 @@ if not os.path.isfile('{0}/cesm-env2/bin/activate_this.py'.format(cesm_pp_path))
                ' Please run $POSTPROCESS_PATH/create_python_env -machine [machine name]')
     raise OSError(err_msg)
 
-execfile('{0}/cesm-env2/bin/activate_this.py'.format(cesm_pp_path), dict(__file__='{0}/cesm-env2/bin/activate_this.py'.format(cesm_pp_path)))
+exec(open('{0}/cesm-env2/bin/activate_this.py'.format(cesm_pp_path)).read())
 
 #
 # import modules installed in the virtual environment

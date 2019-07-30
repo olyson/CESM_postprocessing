@@ -29,6 +29,7 @@ conform/build/
 diag_utils/build/
 diagnostics/build/
 timeseries/build/
+ocean_remap/build/
 
 # Ignore cesm-env2
 cesm-env2/

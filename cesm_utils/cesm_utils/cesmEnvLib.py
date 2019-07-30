@@ -67,11 +67,11 @@ def readXML(casedir, env_file_list):
       raise TypeError(err_msg)
 
   # expand nested environment variables
-  for k,v in output.iteritems():
+  for k,v in output.items():
     output[k] = expand(v, output)
 
   # remove () in output dictionary values
-  for k,v in output.iteritems():
+  for k,v in output.items():
     output[k] = re.sub('[()]', '', v)
     
   return output
@@ -86,7 +86,7 @@ def setXmlEnv(indict):
   Arguments:
   indict (dictionary) - id=value pairs used to set environment variables
   """
-  for k,v in indict.iteritems():
+  for k,v in indict.items():
 ##    print('setXMLenv debug: key = {0}, value = {1}'.format(k,v))
       if not isinstance(v, basestring):
           os.environ[k] = str(v)
